@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reload Method</title>
+</head>
+<body>
+
+<div>
+    <h1>Refresh or Reload a page with jQuery</h1>
+    <p id="display"></p>
+    <button type="button">Reload</button>
+</div>
+
+<script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function (){
+        // console.log("hi");
+
+        // location.reload(true);
+        $("button").click(function () {
+            location.reload(true);
+        })
+
+        var today = new Date();
+        var display = document.getElementById("display");
+
+        display.textContent = today;
+    })
+
+</script>
+
+</body>
+</html>
