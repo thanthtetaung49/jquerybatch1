@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <h1>Welcome to J-Query></h1>
+    <h1>Welcome to J-Query</h1>
 
     <h3>This is awesome js libiary</h3>
 
@@ -29,18 +29,33 @@
             // $('.clickme');
             // $('h1');
 
-            $('#clickme').click('click',function(){
-                console.log('I am working by click.');
+            // $('#clickme').click('click',function(){
+            //     console.log('I am working by click.');
+            // })
+
+            // $('#singleclk').bind('click',function(){
+            //     console.log('I am single click by bind.');
+            // })
+            //
+            // $('#doubleclk').bind('dblclick',function(){
+            //     // console.log('I am double click by click.');
+            //
+            //     console.log('I am double click by click ' + this.nodeName);
+            // })
+
+            $("#clickme").click("click", function () {
+                console.log("i am working click by jquery" + this.nodeName);
             })
 
-            $('#singleclk').bind('click',function(){
-                console.log('I am single click by bind.');
+            $("#singleclk").click("click", function () {
+                console.log("i am working single click by jquery" + this.nodeName);
             })
 
-            $('#doubleclk').bind('dblclick',function(){
-                // console.log('I am double click by click.');
+            $("#doubleclk").bind("dblclick", function () {
+                // console.log("i am working double click by jquery");
+                // console.log(this);
 
-                console.log('I am double click by click ' + this.nodeName);
+                console.log("i am working double click by jquery" + this.nodeName);
             })
         })
 

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI tooltip Method</title>
+
+    <link rel="stylesheet" href="./libs/jquery-ui-1.13.1/jquery-ui-1.13.1/jquery-ui.min.css" type="text/css"/>
+
+    <style type="text/css">
+
+        body{
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            width: 900px;
+
+            background-color: #f4f4f4;
+
+            padding: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h3>How to use JQuery Tootip !</h3>
+        <p>
+            <a href="#" id="tooltipone" title="This is Tooltip of jQuery UI !">It is used </a>in conjuctin with a cursor, when a user hovers the pointer over an item without clicking.
+        </p>
+
+        <form action="" method="">
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="text" name="dob" id="dob" class="form-control" title="You must be over 18 years" autocomplete="off" readonly>
+            </div>
+        </form>
+    </div>
+
+    <script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+    <script src="./libs/jquery-ui-1.13.1/jquery-ui-1.13.1/jquery-ui.min.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            console.log("hi");
+            
+            $("#tooltipone").tooltip({
+                show: 3000,
+                hide: 5000, 
+
+                // show: "bounce",
+                // hide: "explode"
+
+                // show: {
+                //     effect: "shake",
+                //     duration: 2000
+                // },
+
+                // hide: {
+                //     effect: "explode",
+                //     duration: 1000
+                // },
+
+                track: true,
+
+                content: "This is jQuery UI. Thanks for using our libs.",
+
+                content: function() {
+                    // return `<img src="./img/logo1.png" width="30px" />`;
+
+                    var html = `<img src="./img/logo1.png" width="30px" /><h5>This is our company logo</h5><small>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</small>`;
+
+                    return html;
+                }
+            });
+
+            $("#dob").tooltip().datepicker();
+
+            // $(document).tooltip();
+        })
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UI Slider Method</title>
+
+<!--    jqueryui css1 js1-->
+    <link rel="stylesheet" href="./libs/jquery-ui-1.13.1/jquery-ui-1.13.1/jquery-ui.min.css" type="text/css"/>
+
+    <style type="text/css">
+
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container{
+            width: 900px;
+
+            background-color: #f4f4f4;
+
+            padding: 20px;
+        }
+
+        .form-group{
+            margin: 10px 0;
+        }
+
+        .form-group label{
+            font-size: 20px;
+
+            display: block;
+
+            margin-bottom: 20px;
+        }
+
+        .form-control{
+            width: 100%;
+
+            font-size: 20px;
+
+            padding: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <form action="" method="">
+        <div class="form-group">
+            <label for="loan">Loan $ :</label>
+            <input type="text" name="loan" id="loan" class="form-control" readonly/>
+        </div>
+
+        <div class="form-group">
+            <label for="myslider">Amount</label>
+            <div id="myslider"></div>
+        </div>
+
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="text" name="date" id="date" class="form-control" readonly/>
+        </div>
+
+        <div class="form-group">
+            <label for="terms">Terms</label>
+            <div id="terms"></div>
+        </div>
+    </form>
+</div>
+
+<!--jquery js1-->
+<script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+<!--jqueryui css1 js1-->
+<script src="./libs/jquery-ui-1.13.1/jquery-ui-1.13.1/jquery-ui.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        console.log("hi");
+
+        $("#myslider").slider({
+            slide : function (e,jqui) {
+                // console.log(e);
+                // console.log(e.target);
+                // console.log(jqui);
+                // console.log(jqui.value);
+
+                $("#loan").val(jqui.value);
+            },
+            min : 10,
+            max : 200,
+            // value : 70,
+            step : 20,
+
+            orientation : "vertical",
+
+            change : function (e,jqui) {
+                console.log("this is change => ", jqui.value);
+            },
+
+            start : function (e,jqui) {
+                console.log("this is start => ", jqui.value);
+            },
+
+            stop : function (e,jqui) {
+                console.log("this is stop = ", jqui.value);
+            }
+
+        }).css({
+            backgroundColor: "steelblue"
+        });
+
+        // $("#myslider > span").css({
+        //     backgroundColor : "yellow"
+        // })
+ 
+        $("#myslider").children().css({
+            backgroundColor: "violet"
+        });
+
+        $("#terms").slider({
+            slide : function (e,jqui) {
+
+                console.log(e.target);
+
+                console.log(jqui.values);
+
+                $("#date").val("Start " + jqui.values[0] + " End " + jqui.values[1] + "Days");
+            },
+
+            min: 7,
+            max: 31,
+            values: [7,10],
+            range: true,
+
+            start : function (e,jqui) {
+                console.log("Start: ", jqui.value);
+            },
+
+            end : function (e,jqui) {
+                console.log("End: ", jqui.value);
+            }
+
+        }).css({ backgroundColor: "green"});
+
+        $("#terms > div").css({ backgroundColor: "yellow"});
+
+        // $("#terms > span").css({ backgroundColor: "deeppink"});
+
+        $("#terms").children("span:nth-of-type(1)").css({ backgroundColor: "violet"});
+        $("#terms").children("span:nth-of-type(2)").css({ backgroundColor: "skyblue"});
+
+    })
+
+</script>
+
+</body>
+</html>

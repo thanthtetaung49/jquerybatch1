@@ -29,6 +29,10 @@
             width: 100px;
             height: 200px;
             background-color: green;
+
+            margin: 10px;
+            padding: 10px;
+            border: 5px solid red;
         }
 
         .box3{
@@ -48,6 +52,8 @@
             height: 500px;
             background-color: pink;
         }
+
+
     </style>
 </head>
 <body>
@@ -66,26 +72,43 @@
 
     $(document).ready(function () {
         // console.log("hi");
-        $(".box1").click(function (){
-            console.log("Box1 height: " + $(this).height());
-            console.log("Box1 inner-height: " + $(this).innerHeight());
-            console.log("Box1 outer-height: " + $(this).outerHeight());
+        // $(".box1").click(function (){
+        //     console.log("Box1 height: " + $(this).height());
+        //     console.log("Box1 inner-height: " + $(this).innerHeight());
+        //     console.log("Box1 outer-height: " + $(this).outerHeight());
+        // })
+        $(".box1").click("click", function () {
+            let get_box1 = $(".box1");
+
+            console.log("Height box1: " + get_box1.height());
+            console.log("Inner height box1: " + get_box1.innerHeight());
+            console.log("Outer height box1: " + get_box1.outerHeight());
         })
 
-        $(".box2").click(function (){
-            console.log("Box2 height: " + $(this).height());
+        $(".box2").click("click", function () {
+            let get_box2 = $(this);
+
+            console.log("Height box2: " + get_box2.height());
+            console.log("Inner height box2: " + get_box2.innerHeight());
+            console.log("Outer height box2: " + get_box2.outerHeight());
         })
 
-        $(".box3").click(function (){
-            console.log("Box3 height: " + $(this).height());
+        $(".box3").click("click", function () {
+            let get_box3 = $(this);
+
+            console.log("Height box3: " + get_box3.height());
         })
 
-        $(".box4").click(function (){
-            console.log("Box4 height: " + $(this).height());
+        $(".box4").click("click", function () {
+            let get_box4 = $(".box4");
+
+            console.log("Height box4: " + get_box4.height());
         })
 
-        $(".box5").click(function (){
-            console.log("Box5 height: " + $(this).height());
+        $(".box5").click("click", function () {
+            let get_box5 = $(this);
+
+            console.log("Custom height box5: " + get_box5.height());
         })
     })
 </script>

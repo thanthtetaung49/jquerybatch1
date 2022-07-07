@@ -6,8 +6,8 @@
 </head>
 <body>
 
-<h1>This is awesome <u>Js library</u></h1>
-<h1>Are you ready to learn J Query ?</h1>
+<h1>This is awesome <>Js library</u></h1>
+<h1>Are you ready tou learn J Query ?</h1>
 
 <h2>This is awesome <i>Js library</i></h2>
 <h2>Are you ready to learn J query ?</h2>
@@ -22,32 +22,72 @@
 
         console.log("hi");
 
-        let gettext = $("h1").contents();
-        console.log(gettext);
+        // let gettext = $("h1").contents();
+        // console.log(gettext);
+        //
 
-        gettext = $("h1").contents().text();
-        console.log(gettext);
+        let get_text = $("h1").contents();
+        console.log(get_text);
 
-        gettext = $("h1,h2").contents();
-        console.log(gettext);
+        // gettext = $("h1").contents().text();
+        // console.log(gettext);
+        //
 
-        gettext = $("h1,h2").contents().text();
-        console.log(gettext);
+        get_text = $("h1").contents().text();
+        console.log(get_text);
 
-        gettext = $("h1").contents().filter("u");
-        console.log(gettext);
+        // gettext = $("h1,h2").contents();
+        // console.log(gettext);
+        //
 
-        gettext = $("h1").contents().filter("u").text();
-        console.log(gettext);
+        get_text = $("h1,h2").contents();
+        console.log(get_text);
 
-        gettext = $("h1,h2").contents().filter("u").text();
-        console.log(gettext);
+        // gettext = $("h1,h2").contents().text();
+        // console.log(gettext);
+        //
 
-        gettext = $("h1,h2").contents().filter("u,i").text();
-        console.log(gettext);
+        get_text = $("h1,h2").contents().text();
+        console.log(get_text);
+
+        // gettext = $("h1").contents().filter("u");
+        // console.log(gettext);
+        //
+
+        get_text = $("h1").contents().filter("u");
+        console.log(get_text[0]);
+
+        // gettext = $("h1").contents().filter("u").text();
+        // console.log(gettext);
+        //
+        get_text = $("h1").contents().filter("u").text();
+        console.log(get_text);
+
+        // gettext = $("h1,h2").contents().filter("u").text();
+        // console.log(gettext);
+        //
+        get_text = $("h1,h2").contents().filter("i");
+        console.log(get_text);
+
+        // gettext = $("h1,h2").contents().filter("u,i").text();
+        // console.log(gettext);
+
+        get_text = $("h1,h2").contents().filter("u,i");
+        console.log(get_text);
+
+        let add_text = "I am using jQuery now";
+
+        get_text = $("h1,h2").contents().filter("u,i").css({
+            fontSize : "30px",
+            color : "red"
+        });
+        console.log(get_text);
 
         // gettext = $("h1,h2").contents().html();
         // console.log(gettext); // undefined
+
+        get_text = $("h1,h2").contents().html();
+        console.log(get_text);
 
     })
 

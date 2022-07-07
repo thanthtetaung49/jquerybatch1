@@ -53,30 +53,52 @@
         // console.log("hi");
 
         // remove() => remove self
-        $("#removebtn").click(function (){
+        // $("#removebtn").click(function (){
 
+        //     // $("h1").remove();
+        //     // $("h2").remove();
+        //     // $("h1,h2").remove();
+
+        //     $("div").remove()
+        // })
+
+        $("#removebtn").click("click", function(){
             // $("h1").remove();
             // $("h2").remove();
-            // $("h1,h2").remove();
+            // $("h3").remove();
 
-            $("div").remove()
+            // $("h1,h2,h3").remove();
+
+            $("div").remove();
         })
 
         // empty() => just remove to child
-        $("#emptybtn").click(function () {
-
+        // $("#emptybtn").click(function () {
+        //
+        //     $("div").empty();
+        //
+        // })
+        $("#emptybtn").click("click",function () {
             $("div").empty();
-
         })
 
         // detach() = remove()
-        $("#detachbtn").click(function () {
+        // $("#detachbtn").click(function () {
+        //
+        //     $("div").detach();
+        // })
+        $("#detachbtn").click("click",function () {
+            // $("h1").detach();
+            // $("h2").detach();
+            // $("h3").detach();
 
-            $("div").detach();
+            // $("h1,h2,h3").detach();
+
+            $("div").detach()
         })
 
         // add
-        $("#addbtn").click(function () {
+        // $("#addbtn").click(function () {
 
             // $("h1").css({
             //     "background-color": "yellow",
@@ -103,9 +125,37 @@
             //     "border": "3px dashed red"
             // })
 
+            // $("h1").add("span").add("h2").css({
+            //     "background-color": "yellow",
+            //     "border": "3px dashed red"
+            // })
+        // })
+
+        $("#addbtn").click("click",function () {
+
+            // $("h1").css({
+            //     backgroundColor : "yellow",
+            //     border : "1px solid red"
+            // })
+
+            // $("h1").add("span").css({
+            //     backgroundColor : "yellow",
+            //     border : "1px dotted red"
+            // })
+
+            // $("h1,h2").add("span").css({
+            //     backgroundColor : "yellow",
+            //     border : "1px dotted red"
+            // })
+
+            // $("h1").add("span,h2").css({
+            //     backgroundColor : "yellow",
+            //     border : "1px dashed red"
+            // })
+
             $("h1").add("span").add("h2").css({
-                "background-color": "yellow",
-                "border": "3px dashed red"
+                backgroundColor : "yellow",
+                border : "3px dotted blue"
             })
         })
 

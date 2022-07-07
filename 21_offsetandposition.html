@@ -54,27 +54,32 @@
         // console.log("hi");
 
         // offset() // count margin
-        $(".box").click(function (){
-            var offsetbox = $(this).offset();
+        // $(".box").click(function (){
+        //     var offsetbox = $(this).offset();
+        //
+        //     $("#oresultl").html(`left offset: <b>${offsetbox.left}</b>`);
+        //     $("#oresultt").html(`top offset: <b>${offsetbox.top}</b>`);
+        // })
+        $(".box").click("click", function () {
+            let offset_box = $(this).offset();
 
-            $("#oresultl").html(`left offset: <b>${offsetbox.left}</b>`);
-            $("#oresultt").html(`top offset: <b>${offsetbox.top}</b>`);
-
-            // var dispalyleft = document.getElementById("oresultl");
-            // var dispalytop = document.getElementById("oresultt")
-            //
-            // dispalyleft.innerHTML = `left offset: <b>${offsetbox.left}</b>`;
-            // dispalytop.innerHTML = `top offset: <b>${offsetbox.top}</b>`;
-
+            $("#oresultl").html(`<b>offset result left: ${offset_box.left}</b>`);
+            $("#oresultt").html(`<b>offset result top: ${offset_box.top}</b>`);
         })
 
         // position() // not count margin
-        $(".box").click(function (){
-            var positionbox = $(this).position();
+        // $(".box").click(function (){
+        //     var positionbox = $(this).position();
+        //
+        //     $("#presultl").html(`left position <b>${positionbox.left}</b>`);
+        //     $("#presultt").html(`top position <b>${positionbox.top}</b>`);
+        //
+        // })
+        $(".box").click("click", function () {
+            let position_box = $(this).position();
 
-            $("#presultl").html(`left position <b>${positionbox.left}</b>`);
-            $("#presultt").html(`top position <b>${positionbox.top}</b>`);
-
+            $("#presultl").html(`<b>Position result left: ${position_box.left}</b>`);
+            $("#presultt").html(`<b>Position result top: ${position_box.top}</b>`);
         })
 
     })

@@ -7,6 +7,7 @@
 <body>
 
 <h1>Hello Myanmar</h1>
+
 <button type="button" id="prependbtn">Prepend Text</button>
 <button type="button" id="appendbtn">Append Text</button>
 <button type="button" id="appendtobtn">Appendto Text</button>
@@ -19,28 +20,42 @@
         console.log("hi");
 
         // prepend
-        $("#prependbtn").click(function () {
-            console.log("click");
+        // $("#prependbtn").click(function () {
+        //     console.log("click");
 
-            // $("h1").prepend("Greeting message ");
-            $("h1").prepend("<u>Greeting message</u>");
+        //     // $("h1").prepend("Greeting message ");
+        //     $("h1").prepend("<u>Greeting message</u>");
+        // })
+
+        $("#prependbtn").click("click", function () {
+            $("h1").prepend("<u>I am prepend</u>");
         })
 
         // append
-        $("#appendbtn").click(function () {
-            console.log("click");
+        // $("#appendbtn").click(function () {
+        //     console.log("click");
 
-            // $("h1").append("Greeting message ");
-            $("h1").append("<u>Greeting message</u>");
+        //     // $("h1").append("Greeting message ");
+        //     $("h1").append("<u>Greeting message</u>");
+        // })
+
+        $("#appendbtn").click("click", function () {
+            $("h1").append("<u>Hello, I'm append</u>");
         })
 
         // appendTo()
-        $("#appendtobtn").click(function () {
+        // $("#appendtobtn").click(function () {
 
-            // result = not working (cuz must be include html tags)
-            // $("hello world").appendTo("h1");
+        //     // result = not working (cuz must be include html tags)
+        //     // $("hello world").appendTo("h1");
 
-            $("<u>hello world</u>").appendTo("h1");
+        //     $("<u>hello world</u>").appendTo("h1");
+        // })
+
+        $("#appendtobtn").click("click", function () {
+            let greeting = "<b>Hello June, the weather is very good today.</b>";
+
+            $(greeting).appendTo("h1");
         })
     })
 </script>

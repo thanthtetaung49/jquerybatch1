@@ -79,36 +79,33 @@
 
         // The index starts from 0
         // even
-        $("#evenbtn").click(function () {
-            $(".box").even().css("background-color","black");
+        $("#evenbtn").click("click", function () {
+            $(".box").even().css({
+                backgroundColor: "yellow"
+            })
         })
 
         // odd
-        $("#oddbtn").click(function () {
-            $(".box").odd().css("background-color","grey");
+        $("#oddbtn").click("click", function () {
+            $(".box").odd().css({
+                backgroundColor: "black"
+            })
         })
 
-        // slice(start,stop)
-        $("#slibtn").click(function () {
+        // slice(index no,length)
+        $("#slibtn").click("click", function () {
+            // $(".box").slice(0,4).css({
+            //     backgroundColor: "steelblue"
+            // })
 
             // $(".box").slice(1,4).css({
-            //     "background-color" : "steelblue",
-            //     "color" : "#fff"
+            //     backgroundColor: "steelblue"
             // })
 
-            // $(".box").slice(0,3).css({
-            //     "background-color" : "steelblue",
-            //     "color" : "#fff"
-            // })
-
-            $(".box").slice(-3,-1).css({
-                "background-color" : "steelblue",
-                "color" : "#fff"
+            $(".box").slice(-5,-3).css({
+                backgroundColor: "steelblue"
             })
-
         })
-
-
     })
 
 </script>

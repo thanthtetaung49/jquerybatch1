@@ -65,48 +65,53 @@
         // console.log("hi");
 
         // closet(parameter)
-        $("#clsbtn").click(function () {
-            $("h1").closest("div").css({
-                "background-color" : "violet",
-                "color" : "#fff",
-                "border" : "1px dashed red"
+        // $("#clsbtn").click(function () {
+        //     $("h1").closest("div").css({
+        //         "background-color" : "violet",
+        //         "color" : "#fff",
+        //         "border" : "1px dashed red"
+        //     })
+        // })
+        $("#clsbtn").click("click", function () {
+            $("h1").closest(".div").css({
+                backgroundColor : "blue",
+                color : "#fff",
+                border : "2px dashed red"
             })
         })
 
         // parentUntil()
-        $("#parentbtn").click(function () {
-            // $("h1").parentsUntil("ul").css({
-            //     "background-color" : "green",
-            //     "color" : "#fff",
-            //     "border" : "1px dashed gold"
-            // })
-
-            // $("h1").parentsUntil("div").css({
-            //     "background-color" : "green",
-            //     "color" : "#fff",
-            //     "border" : "1px dashed gold"
-            // })
-
+        $("#parentbtn").click("click", function () {
             // $("h1").parentsUntil(".container").css({
-            //     "background-color" : "green",
-            //     "color" : "#fff",
-            //     "border" : "1px dashed gold"
+            //     backgroundColor: "yellow",
+            //     color: "#fff",
+            //     border: "2px dashed blue"
+            // })
+
+            // $("h1").parentsUntil("#div1").css({
+            //     backgroundColor: "yellow",
+            //     color: "#fff",
+            //     border: "2px dashed blue"
+            // })
+
+            // $("h1").parentsUntil("#div2").css({
+            //     backgroundColor: "yellow",
+            //     color: "#fff",
+            //     border: "2px dashed blue"
             // })
 
             // $("h1").parentsUntil(".div").css({
-            //     "background-color" : "green",
-            //     "color" : "#fff",
-            //     "border" : "1px dashed gold"
+            //     backgroundColor: "yellow",
+            //     color: "#fff",
+            //     border: "2px dashed blue"
             // })
 
-            $("h1").parentsUntil("#div2").css({
-                "background-color" : "green",
-                "color" : "#fff",
-                "border" : "1px dashed gold"
+            $("h1").parentsUntil("ul").css({
+                backgroundColor: "yellow",
+                color: "#fff",
+                border: "2px solid blue"
             })
         })
-
-
     })
 
 </script>

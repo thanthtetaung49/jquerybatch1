@@ -44,51 +44,52 @@
     <script>
 
         $(document).ready(function() {
-            console.log("hay");
-
-            // mouseenter 
-            // $(".container").mouseenter(function() {
-            //     console.log("i am working  by using mouseenter");
-            // })
-
-            // mouseover (include child elements)
-            // $(".container").mouseover(function(){
-            //     console.log("i am working by using mouseover");
+            // mouseenter
+            // $(".container").mouseenter(function () {
+            //     console.log("container is working by mouseenter");
             // })
 
             // mouseleave
-            // $(".container").mouseleave(function() {
-            //     console.log("i am working by using mouseleave");
+            // $(".container").mouseleave(function () {
+            //     console.log("container is working by mouseleave");
             // })
 
-            // mouseout (include child elements)
-            // $(".container").mouseout(function(){
-            //     console.log("i am working  by using mouseout");
+            // mouseover
+            // $(".container").mouseover(function () {
+            //     console.log("container is working by mouseover");
             // })
 
-            // hover(function in, function out)
-            // $(".box").hover(function(){
-            //     // for in
-            //     $(this).css("background-color","violet");
-
-            // }, function(){
-            //     // for out
-            //     $(this).css("background-color","red");
+            // mouseout
+            // $(".container").mouseout(function () {
+            //     console.log("container is working by mouseout");
             // })
-
-            $(".container").hover(function(){
-                $(this).css("background-color","pink");
-            })
 
             // mousedown
-            $(".box").mousedown(function(){
-                console.log("i am working by using mousedown");
-            })
+            // $(".container").mousedown(function () {
+            //     console.log("container is working by mousedown");
+            // })
 
             // mouseup
-            $(".box").mouseup(function(){
-                console.log("i am working by using mouseup");
+            // $(".container").mouseup(function () {
+            //     console.log("container is working by mouseup");
+            // })
+
+            // hover(funIn,funOut)
+            $(".container").hover(function () {
+                $(".box").css({
+                    backgroundColor : "orange"
+                })
+            }, function () {
+                $(".box").css({
+                    backgroundColor: "violet"
+                })
             })
+
+            // $(".container").hover(function () {
+            //     $(this).css({
+            //         backgroundColor : "grey"
+            //     })
+            // })
 
         })
     </script>

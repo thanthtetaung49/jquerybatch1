@@ -8,25 +8,25 @@
 </head>
 <body>
 
-    <h1>This is awesome <u>js libiary</u></h1>
+    <h1>This is awesome <u>js library</u></h1>
     <h1>Save Myanmar</h1>
     <h1>Save Our Country</h1>
 
     <hr>
 
-    <h2>This is awesome <u>js libiary</u></h2>
+    <h2>This is awesome <u>js library</u></h2>
     <h2>Save Myanmar</h2>
     <h2>Save Our Country</h2>
 
     <hr>
 
-    <h3>This is awesome <u>js libiary</u></h3>
+    <h3>This is awesome <u>js library</u></h3>
     <h3>Save Myanmar</h3>
     <h3>Save Our Country</h3>
 
     <hr>
 
-    <h4>This is awesome <u>js libiary</u></h4>
+    <h4>This is awesome <u>js</u></h4>
     <h4>Save Myanmar</h4>
     <h4>Save Our Country</h4>
     
@@ -40,12 +40,15 @@
         // text() to text()
         $(document).ready(function(){
 
-            console.log($('h1').html());
-            console.log($('h1').text());
+            // console.log($('h1').html());
+            // console.log($('h1').text());
+            //
+            // var getfirsth2 = $('h2:first').text();
+            //
+            // $('h2:last').text(getfirsth2);
 
-            var getfirsth2 = $('h2:first').text();
-
-            $('h2:last').text(getfirsth2);
+            let first_h1 = $("h1:first").text();
+            $("h1:last").text(first_h1);
         })
 
         // html() to html()
@@ -56,23 +59,34 @@
 
             // $('h1:last').html(getfirsth1);
 
-            var getfirsth1 = $('h1:first').html();
-            // console.log(getfirsth1);
-            $('h1:last').html(getfirsth1);
+            // var getfirsth1 = $('h1:first').html();
+            // // console.log(getfirsth1);
+            // $('h1:last').html(getfirsth1);
+
+            let heading_h2 = $("h2:first").html();
+            $("h2:last").html(heading_h2);
         })
 
         // html() to text()
         $(document).ready(function(){
-            let getfirsth3 = $('h3:first').html();
-            console.log(getfirsth3);
-            $('h3:last').text(getfirsth3);
+            // let getfirsth3 = $('h3:first').html();
+            // console.log(getfirsth3);
+            // $('h3:last').text(getfirsth3);
+
+            let heading_h3 = $("h3:first").html();
+            console.log(heading_h3);
+
+            $("h3:last").text(heading_h3);
         })
 
         // text() to html()
         $(document).ready(function(){
-            let getfirsth4 = $('h4:first').text();
-            console.log(getfirsth4);
-            $('h4:last').html(getfirsth4);
+            // let getfirsth4 = $('h4:first').text();
+            // console.log(getfirsth4);
+            // $('h4:last').html(getfirsth4);
+
+            let heading_h4 = $("h4:first").text();
+            $("h4:last").html(heading_h4);
         })
     </script>
     

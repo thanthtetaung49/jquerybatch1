@@ -74,71 +74,70 @@
         console.log("hi");
 
         // blur
-        $("#firstname").blur(function(){
-            console.log("fastname is working by blur");
-        })
+        // $("#firstname").blur(function(){
+        //     console.log("firstname is working by blur");
+        // })
 
         // change
-        $("#firstname").change(function(){
-            console.log("fastname is working by change");
-        })
+        // $("#firstname").change(function(){
+        //     console.log("firstname is working by change");
+        // })
 
         // focus()
-        $("#lastname").focus(function(){
-            console.log("lastname is working by focus");
-        })
+        // $("#lastname").focus(function () {
+        //     console.log("lastname is working by focus");
+        // })
 
         // focusin()
-        $("#lastname").focusin(function(){
-            console.log("lastname is working by focusin");
-        })
+        // $("#lastname").focusin(function () {
+        //     console.log("lastname is working by focusin");
+        // })
 
         // focusout()
-        $("#lastname").focusout(function(){
-            console.log("lastname is working by focusout");
-        })
+        // $("#lastname").focusout(function () {
+        //     console.log("lastname is working by focusout");
+        // })
 
         // select()
-        $("input").select(function(){
-            console.log("input is selected to some text");
-        })
-
-        // change()
-        $("select").change(function(){
-            console.log("You change to new country");
-        })
+        // $("#lastname").select(function () {
+        //     console.log("lastname is working by select");
+        // })
 
         // keydown()
-        var q = 0;
-        $("#age").keydown(function(){
-            console.log("age working by keydown");
-            // console.log(q++);
-            console.log(q += 1);
-        })
+        // let p = 0;
+        // $("#firstname").keydown(function () {
+        //     console.log("firstname is working by keydown");
+        //     let count_keydown = ++p;
+        //     console.log(count_keydown);
+        // })
 
-        // keypress()
-        var x = 0;
-        $("#phone").keypress(function(){
-            console.log("phone is working  by keypress");
-            console.log(x++);
-        })
+        // // keypress()
+        // let x = 0;
+        // $("#age").keypress(function () {
+        //     console.log("age is working by keypress");
+        //     let count_keypress = ++x;
+        //     console.log(count_keypress);
+        // })
 
 
         // keyup()
-        var y = 0;
-        $("#nrc").keyup(function(){
-            console.log("nrc is working by keyup");
-            console.log(y++);
-        })
+        // let y = 0;
+        // $("#phone").keyup(function () {
+        //     console.log("phone is working by keyup");
+        //     let count_keyup = ++y;
+        //     console.log(count_keyup);
+        // })
 
         // submit()
-        var z = 0;
-        $("form").submit(function(e){
-            console.log("Data submitted");
-            console.log(z += 1);
+        let z = 0;
+        $("form").submit(function (e) {
+            console.log("form is working by submit");
+            let count_nrc = ++z;
+            console.log(count_nrc);
 
             e.preventDefault();
         })
+
     })
 
 </script>

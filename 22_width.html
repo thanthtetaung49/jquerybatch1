@@ -25,18 +25,30 @@
             width: 200px;
             height: 80px;
             background-color: green;
+
+            margin: 5px;
+            padding: 2px;
+            border: 5px solid blue;
         }
 
         .box3{
             width: 300px;
             height: 80px;
             background-color: yellow;
+
+            margin: 5px;
+            padding: 2px;
+            border: 5px solid blue;
         }
 
         .box4{
             width: 400px;
             height: 80px;
             background-color: blue;
+
+            margin: 5px;
+            padding: 2px;
+            border: 5px solid #000000;
         }
 
         .box5{
@@ -68,34 +80,58 @@
     $(document).ready(function () {
         // console.log("hi");
 
-        $(".box1").click(function () {
-            console.log("Box 1 width: " + $(this).width());
-            console.log("Box 1 inner-width: " + $(this).innerWidth());
-            console.log("Box 1 outer-width: " + $(this).outerWidth());
+        $(".box1").click("click", function () {
+            let get_box1 = $(this);
+
+            console.log("Width box1: ", get_box1.width());
+            console.log("Inner width box1: ",get_box1.innerWidth());
+            console.log("Outer width box1: ", get_box1.outerWidth());
         })
 
-        $(".box2").click(function () {
-            console.log("Box 2 width: " + $(this).width());
+        $(".box2").click("click", function () {
+            let get_box2 = $(this);
+
+            console.log("Width box2: ", get_box2.width());
+            console.log("Inner width box2: ", get_box2.innerWidth());
+            console.log("Outer width box2: ", get_box2.outerWidth());
         })
 
-        $(".box3").click(function () {
-            console.log("Box 3 width: " + $(this).width());
+        $(".box3").click("click", function () {
+            let get_box3 = $(".box3");
+
+            console.log("Width box3: ", get_box3.width());
+            console.log("Inner width box3: ", get_box3.innerWidth());
+            console.log("Outer width box3: ", get_box3.outerWidth());
         })
 
-        $(".box4").click(function () {
-            console.log("Box 4 width: " + $(this).width());
+        $(".box4").click("click", function () {
+            let get_box4 = $(".box4");
+
+            console.log("Width box4: ", get_box4.width());
+            console.log("Inner width box4: ", get_box4.innerWidth());
+            console.log("Outer width box4: ", get_box4.outerWidth());
         })
 
-        var cuswidth = 1000;
+        let cus_width = 1000;
 
-        $(".box5").click(function () {
-            console.log("Box 5 width: " + $(this).width());
-            // custome width
-            // $(this).width(cuswidth);
+        $(".box5").click("click", function () {
+            let get_box5 = $(".box5").width(cus_width).addClass("text-center");
 
-            $(this).width(cuswidth).addClass("text-center");
-            console.log("Box 5 custome width: " + $(this).width());
+            console.log("Width box5: ", get_box5);
         })
+
+
+
+        // var cuswidth = 1000;
+        //
+        // $(".box5").click(function () {
+        //     console.log("Box 5 width: " + $(this).width());
+        //     // custome width
+        //     // $(this).width(cuswidth);
+        //
+        //     $(this).width(cuswidth).addClass("text-center");
+        //     console.log("Box 5 custome width: " + $(this).width());
+        // })
     })
 
 </script>

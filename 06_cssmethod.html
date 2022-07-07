@@ -21,14 +21,21 @@
         $(document).ready(function(){
             // console.log('hay');
 
-            $("button").click(function(){
-                console.log("hee hee");
+            $("h1").css("background-color","red");
+            $("h2,h3").css("color","green");
 
-                $("h1").css("background-color", "red");
-                $("h2").css("background-color", "green");
-                $("h3").css({
-                    "background-color" : "pink",
-                    "font-size" : "15px",
+            $("button").click("click", function () {
+                $("h1").css("background-color","green");
+                $("h2,h3").css({
+                    width : "500px",
+                    height : "300px",
+                    backgroundColor : "violet",
+                    color : "#fff",
+                    border : "1px solid red",
+                    borderRadius : "10px",
+                    display : "flex",
+                    justifyContent : "center",
+                    alignItems : "center",
                 })
             })
         })

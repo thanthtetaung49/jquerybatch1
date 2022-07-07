@@ -52,22 +52,30 @@
     $(document).ready(function (){
         // console.log("hi");
 
-        console.log($(".box")); // array objects
-        console.log($(".box")[0]);
-        console.log($(".box")[0].className); // string
-        console.log($(".box")[0].classList); // DOMTokenList
-        console.log($(".box")[0].classList[0]); // box
-        console.log($(".box")[0].classList[1]); // orange
-        console.log($(".box")[0].id);
+        let get_box = $(".box");
+        console.log(get_box); // array objects
+        console.log(get_box[1]); // <div id="div2" class="box green">Box 2</div>
+        console.log(get_box[1].id); // div2
+        console.log(get_box[1].className); // string
+        console.log(get_box[1].classList); // DOMTokenList
+        console.log(get_box[1].classList[0]); // box
+        console.log(get_box[1].classList[1]); // green
 
         // $(selector).get()
-        console.log($(".box")); // array objects
-        console.log($(".box").get(1));
-        console.log($(".box").get(1).className); // string
-        console.log($(".box").get(1).classList); // DOMTokenList
-        console.log($(".box").get(1).classList[0]); // box
-        console.log($(".box").get(1).classList[1]); // green
-        console.log($(".box").get(1).id);
+        // console.log($(".box")); // array objects
+        // console.log($(".box").get(1));
+        // console.log($(".box").get(1).className); // string
+        // console.log($(".box").get(1).classList); // DOMTokenList
+        // console.log($(".box").get(1).classList[0]); // box
+        // console.log($(".box").get(1).classList[1]); // green
+        // console.log($(".box").get(1).id);
+        let my_box = $(".box");
+        console.log(my_box); // array objects
+        console.log(my_box.get(2)); // <div id="div2" class="box green">Box 2</div>
+        console.log(my_box.get(2).id); // div3
+        console.log(my_box.get(2).className); // string
+        console.log(my_box.get(2).classList); // DOMTokenList
+        console.log(my_box.get(2).classList[0]); // box
     })
 
 </script>

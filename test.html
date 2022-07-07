@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <link rel="stylesheet" href="./libs/jquery-ui-1.13.1/jquery-ui-1.13.1/jquery-ui.min.css" type="text/css">
+
+    <style type="text/css">
+        body{
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-direction: column;
+        }
+
+        #progressbar{
+            width: 500px;
+
+            margin: 20px;
+
+            position: relative;
+        }
+
+        #span{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="container">
+        <h1>My Skill</h1>
+        <div id="progressbar"><span id="span">40%</span></div>
+    </div>
+
+    <button type="button" id="btn">Mail</button>
+
+    <div id="btn_radio" class="form-group">
+        <form action="">
+            <input type="radio" name="radio" id="radio_one" class="form-control" value="0">
+            <label for="radio_one">Radio One</label>
+
+            <input type="radio" name="radio" id="radio_two" class="form-control" value="1">
+            <label for="radio_two">Radio Two</label>
+
+            <input type="radio" name="radio" id="radio_three" class="form-control" value="2">
+            <label for="radio_three">Radio Three</label>
+        </form>
+    </div>
+
+    <div id="btn_checkbox" class="form-group">
+        <form action="">
+            <input type="checkbox" name="checkbox" id="check_one" class="form-control" value="0">
+            <label for="check_one">Checkbox One</label>
+
+            <input type="checkbox" name="checkbox" id="check_two" class="form-control" value="1">
+            <label for="check_two">Checkbox Two</label>
+
+            <input type="checkbox" name="checkbox" id="check_three" class="form-control" value="3">
+            <label for="check_three">Checkbox Three</label>
+        </form>
+    </div>
+
+    <input type="button" id="disable_btn" value="Disabled Button">
+
+    <div class="container">
+        <form action="">
+            <label id="title_volume">Volume value</label>
+            <input type="text" name="loan" id="loan" readonly>
+
+            <div id="slider"></div>
+
+            <label id="title_date">Date</label>
+            <input type="text" name="date" id="date" readonly>
+
+            <div id="date_slider"></div>
+        </form>
+    </div>
+
+
+
+    <script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+    <script src="./libs/jquery-ui-1.13.1/jquery-ui-1.13.1/jquery-ui.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+            console.log("hi");
+
+            // Start Progressbar
+            $("#progressbar").progressbar({
+                value: 40
+            }).css({
+                backgroundColor: "yellow",
+                backgroundImage: "url('./img/arrow.png')",
+                backgroundRepeat: "repeat-x",
+                backgroundSize: "50px",
+                backgroundPosition: "center",
+                fontWeight: "bold"
+            });
+
+            $("#progressbar > div").css({
+                backgroundColor: "red"
+            })
+            // End Progressbar
+
+            // Start Button
+
+            $("#btn").button({
+                icons: {
+                    primary: "ui-icon-mail-closed"
+                },
+
+                // showLabel: false,
+
+                label: "Mails Message",
+
+                // iconPosition: "top",
+                // iconPosition: "bottom",
+                // iconPosition: "start",
+                iconPosition: "end"
+            });
+
+            $("#btn_radio").buttonset().css({
+                margin: "20px"
+            });
+
+            $("#btn_checkbox").buttonset();
+
+            $("#disable_btn").button({
+                disabled: true
+            }).css({margin: "20px"});
+
+            // End Button
+
+            // Start Slider
+            $("#title_volume, #title_date").css({
+                fontWeight: "bold",
+                fontSize: "25px",
+                display: "block"
+            })
+
+            $("#loan, #date").css({
+                width: "500px",
+                height: "20px"
+            })
+
+            $("#slider").slider({
+                slide: function(e, jqui) {
+                    
+                    console.log(e);
+                    console.log(jqui.value);
+
+                    $("#loan").val(jqui.value);
+
+                },
+
+                min: 0,
+                max: 100,
+                // step: 20,
+                value: 30,
+
+                orientation: "horizontal",
+
+                change: function(e, jqui) {
+                    console.log("This is Change: " + jqui.value);
+                },
+
+                start: function(e, jqui) {
+                    console.log("This is start: " + jqui.value);
+                },
+
+                stop: function(e, jqui) {
+                    console.log("This is stop: " + jqui.value);
+                }
+            }).css({margin: "20px"});
+
+            $("#date_slider").slider({
+                slide: function(e, jqui) {
+                    console.log(e);
+                    console.log(jqui);
+
+                    console.log(jqui.value);
+
+                    $("#date").val("Start " + jqui.values[0] + " to " + "End " + jqui.values[1] + "Days");
+                },
+
+                min: 1,
+                max: 31,
+                values: [5,25],
+
+                range: true,
+
+                start: function(e, jqui) {
+                    console.log("Start: " + jqui.value);
+                },
+
+                stop: function(e, jqui) {
+                    console.log("Stop: " + jqui.value);
+                },
+
+                change: function(e, jqui) {
+                    console.log("Change: " + jqui.value);
+                }
+            }).css({margin: "20px"});
+            // End Slider
+        })
+
+    </script>
+    
+</body>
+</html>

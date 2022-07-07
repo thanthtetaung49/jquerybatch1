@@ -20,14 +20,27 @@
         // console.log("hi");
 
         // location.reload(true);
-        $("button").click(function () {
-            location.reload(true);
-        })
+        function display_today(){
+            $("button").click("click", function (e) {
+                location.reload(true);
+            })
 
-        var today = new Date();
-        var display = document.getElementById("display");
+            let today = new Date();
 
-        display.textContent = today;
+            $("#display").text(today);
+        }
+
+        display_today();
+
+        setInterval(display_today,1000);
+        // $("button").click(function () {
+        //     location.reload(true);
+        // })
+        //
+        // var today = new Date();
+        // var display = document.getElementById("display");
+        //
+        // display.textContent = today;
     })
 
 </script>

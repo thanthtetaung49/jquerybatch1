@@ -56,12 +56,12 @@
 
     <button type="button" id="txtpri">text-primary</button>
     <button type="button" id="bginfo">bg-info</button>
-    <button type="button" id="txtbg">textlight & bg</button>
+    <button type="button" id="txtbg">text-light & bg</button>
     <button type="button" id="multi-attr">Multi-attribute</button>
     <button type="button" id="remove-attr">Remove Attribute</button>
 
     <button type="button" id="text-cnt">Add Class</button>
-    <button type="button" id="add-mulit">Add multi Class</button>
+    <button type="button" id="add-multi">Add multi Class</button>
     <button type="button" id="rmv-textlg">Remove textlight</button>
     <button type="button" id="rmv-multi">Remove multi class</button>
 
@@ -79,37 +79,36 @@
       // console.log("hi");
 
       // $(selector).attr("attribute","value");
-
-      $("#txtpri").click(function (){
-          $("h1").attr("class","text-primary");
+      $("#txtpri").click(function () {
+          $("#1").attr("class","text-primary");
       })
 
-      $("#bginfo").click(function (){
-          $("h1").attr("class","bg-info");
+      $("#bginfo").click("click", function () {
+          $("#2").attr("class","bg-info");
       })
 
-      $("#txtbg").click(function (){
-          $("h1").attr("class","text-light bg-info");
+      $("#txtbg").click("click", function () {
+          $("#3").attr("class","text-light bg-light");
       })
 
       // multi attribute
-      $("#multi-attr").click(function () {
-          $("img").attr({
-              alt : "logo2",
-              width : "200",
+      $("#multi-attr").click("click", function () {
+          $("#4").attr({
               src : "./img/phone-removebg-preview.png",
-              title : "this is my phone",
-              abc : "this is my abc"
+              width : "200px",
+              alt : "Phone photo",
+              title : "This is my phone"
           })
       })
+
 
       // remove attribute()
       // $("#remove-attr").click(function () {
       //     $("h1").removeAttr("class");
       // })
 
-      $("#remove-attr").click(function (){
-          $("h1").removeAttr("id class");
+      $("#remove-attr").click("click", function () {
+          $("#1").removeAttr("id class");
       })
 
   //    ----------------------------------------------------
@@ -117,33 +116,41 @@
       // CLASS
 
       // $(selector).addClass()
-      $("#text-cnt").click(function () {
-          $("h1").addClass("text-center");
+      $("#text-cnt").click("click", function () {
+          $("#1").addClass("text-center");
       })
 
       // addmulticlass
-      $("#add-mulit").click(function () {
-          $("h1").addClass("underlined text-center");
+      $("#add-multi").click("click", function () {
+          $("#2").addClass("bg-info text-primary");
       })
 
-      // // $(selector).removeClass()
-      $("#rmv-textlg").click(function (){
-          $("h1").removeClass("text-light");
+
+      // $(selector).removeClass()
+      $("#rmv-textlg").click("click", function () {
+          $("#3").removeClass("text-light");
       })
 
       // remove multi
-      $("#rmv-multi").click(function () {
-          $("h1").removeClass("underlined text-center");
+      $("#rmv-multi").click("click", function () {
+          $("#2").removeClass("bg-info text-primary");
       })
 
       // $(selector).hasClass();
-      $("#hasclass").click(function (){
-          window.alert($("h1").hasClass("text-center"));
+      // $("#hasclass").click(function (){
+      //     window.alert($("h1").hasClass("text-center"));
+      // })
+      $("#hasclass").click("click", function () {
+          // window.alert($("#1").hasClass("text-center"));
+          window.alert($("#1").has("text-center")? "class-center att is here" : "class-center att is not here");
       })
 
       // toggleClass()
-      $("#togclass").click(function (){
-          $("h1").toggleClass("text-center");
+      // $("#togclass").click(function (){
+      //     $("h1").toggleClass("text-center");
+      // })
+      $("#togclass").click("click", function () {
+          $("#1").toggleClass("text-center");
       })
 
 

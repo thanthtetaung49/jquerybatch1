@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "xabikos.javascriptsnippets",
+        "abusaidm.html-snippets",
+        "dbaeumer.vscode-eslint",
+        "tabnine.tabnine-vscode",
+        "donjayamanne.jquerysnippets"
+    ]
+}

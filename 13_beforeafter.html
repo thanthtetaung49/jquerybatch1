@@ -23,19 +23,31 @@
         $(document).ready(function(){
             console.log("hay");
 
-            $("#before").click(function(){
-                // console.log("before");
+            $("#before").click("click", function () {
+                // $("h1").before("<p>I am before</b>");
 
-                // $("h1").before("<p>Save Myanmar</p>");
-
-                $("h1,h3").before("<p>Save Myanmar</p>")
+                    $("h1,h3").before("<p>I am before</b>");
             })
 
-            $("#after").click(function(){
-                // console.log("after");
+            $("#after").click("click", function () {
+                // $("h1").after("<p>I am After");
 
-                $("h1,h3").after("<p><b>Pray for Myanmar</p></b>")
+                    $("h1,h3").after("<p>I am After</p>");
             })
+
+            // $("#before").click(function(){
+            //     // console.log("before");
+
+            //     // $("h1").before("<p>Save Myanmar</p>");
+
+            //     $("h1,h3").before("<p>Save Myanmar</p>")
+            // })
+
+            // $("#after").click(function(){
+            //     // console.log("after");
+
+            //     $("h1,h3").after("<p><b>Pray for Myanmar</p></b>")
+            // })
         })
     </script>
     

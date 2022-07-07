@@ -6,7 +6,7 @@
 
     <style type="text/css">
 
-        body{
+        body {
             height: 100vh;
 
             display: flex;
@@ -14,7 +14,7 @@
             align-items: center;
         }
 
-        .container{
+        .container {
             width: 500px;
 
             background-color: #f4f4f4;
@@ -23,7 +23,7 @@
             display: flex;
         }
 
-        .box{
+        .box {
             width: 150px;
             height: 300px;
 
@@ -32,7 +32,7 @@
             background-color: green;
         }
 
-        .text-light{
+        .text-light {
             color: #ffffff;
         }
     </style>
@@ -63,50 +63,94 @@
         // console.log("hi");
 
         // is()
-        // $(".container").click(function () {
-        //     if ($(".box").children().is("h3")){
-        //         $(".box").children("h3").css("background-color","orange");
+        // $(".container").click("click", function () {
+        //     let checked_h3 = $(".box").children();
+        //
+        //     if (checked_h3.is("h3")) {
+        //         $(".box").children("h3").css({
+        //             backgroundColor: "orange",
+        //             color: "#fff",
+        //             textAlign: "center"
+        //         })
         //     }
         // })
 
         // not()
-        $(".container").click(function () {
-            if($(".box").children().is("h3")){
-                $(".box").children("h3").not(".text-light").css("background","red");
-            }
-        })
+        // $(".container").click('click', function () {
+        //     let check_noth3 = $(".box").children();
+        //
+        //     if (check_noth3.is("h3")) {
+        //         $(".box").children("h3").not(".text-light").css({
+        //             backgroundColor: "red",
+        //             color: "#fff",
+        //             textAlign: "center"
+        //         })
+        //     }
+        // })
 
         // jQuery.isFunction(val)
         // $.isFunction(val)
 
-        console.log(jQuery.isFunction(function () {})); // true
-        console.log($.isFunction(function (){})); // true
-        console.log(jQuery.isFunction(()=>{})); // true
-        console.log($.isFunction(()=>{})); // true
+        let fun = function () {
+        };
+        let arr_fun = () => {
+        };
 
-        console.log($.isFunction([])) // false
+        console.log(jQuery.isFunction(fun)); // true
+        console.log($.isFunction(fun)); // true
+        console.log(jQuery.isFunction(arr_fun)); // true
+        console.log($.isFunction(arr_fun)); // true
+
+        console.log(jQuery.isFunction([])); // false
+        console.log($.isFunction([])); // false
 
         // jQuery.isArray(val);
         // $.isArray(val);
 
-        console.log(jQuery.isArray([])); // true
-        console.log($.isArray([])); // true
+        // console.log(jQuery.isArray([])); // true
+        // console.log($.isArray([])); // true
+
+        let arys = [];
+
+        console.log(jQuery.isArray(arys)); // true
+        console.log($.isArray(arys)); // true
 
         // jQuery.isPlainObject(val);
         // $.isPlainObject(val);
 
-        console.log(jQuery.isPlainObject({})); // true
-        console.log($.isPlainObject({x:10,y:20})); // true
-        console.log(jQuery.isPlainObject(Object())) // true
-        console.log($.isPlainObject(new Object())); // true
+        // console.log(jQuery.isPlainObject({})); // true
+        // console.log($.isPlainObject({x:10,y:20})); // true
+        // console.log(jQuery.isPlainObject(Object())) // true
+        // console.log($.isPlainObject(new Object())); // true
+
+        let plain_obj = {};
+        let obj = Object();
+        let new_obj = new Object();
+
+        console.log(jQuery.isPlainObject(plain_obj)); // true
+        console.log($.isPlainObject(plain_obj)); // true
+        console.log(jQuery.isPlainObject(obj)); // true
+        console.log($.isPlainObject(new_obj)); // true
 
         // jQuery.isEmptyObject(val);
         // $.isEmptyObject(val);
+        console.log(jQuery.isEmptyObject(plain_obj)); // true
+        console.log($.isEmptyObject(obj)); // true
+        console.log(jQuery.isEmptyObject(new_obj));
 
-        console.log(jQuery.isEmptyObject({})); // true
-        console.log($.isEmptyObject({x:200,y:100})); // false
-        console.log(jQuery.isEmptyObject(Object())); // true
-        console.log($.isEmptyObject(new Object())); // true
+        console.log($.isEmptyObject(new Object(
+            {
+                studentname : "Aung Aung",
+                age : 22,
+                city : "Yangon"
+            }
+        ))); // false
+
+        // console.log(jQuery.isEmptyObject({})); // true
+        // console.log($.isEmptyObject({x:200,y:100})); // false
+        // console.log(jQuery.isEmptyObject(Object())); // true
+        // console.log($.isEmptyObject(new Object())); // true
+
     })
 </script>
 

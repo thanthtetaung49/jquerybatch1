@@ -30,17 +30,28 @@
         console.log("hi");
 
         // delegate("selector",event,function)
-        $("body").delegate("#dlgbtn","click",function (){
-            // $("h1").before("<p>Thanks for delegate me</p>");
-            // $("h1").after("<p>Thanks for delegate me</p>");
-            $("h1").prepend("<p>Thanks for delegate me</p>");
-            // $("h1").append("<p>Thanks for delegate me</p>");
+        // $("body").delegate("#dlgbtn","click",function (){
+        //     // $("h1").before("<p>Thanks for delegate me</p>");
+        //     // $("h1").after("<p>Thanks for delegate me</p>");
+        //     $("h1").prepend("<p>Thanks for delegate me</p>");
+        //     // $("h1").append("<p>Thanks for delegate me</p>");
+        // })
+
+        $("body").delegate("#dlgbtn","click",function () {
+            // $("h1").before("<p>Hello, I am before delegate");
+                // $("h1").after("<p>Hello, I am delegate after");
+                    // $("h1").prepend("<p>Hello, I am prepend delegate");
+                        $("h1").append("<p>Hello, I am append delegate");
         })
 
         // undelegate()
-        $("#undlgbtn").click(function () {
+        // $("#undlgbtn").click(function () {
 
-            // $("body").undelegate();
+        //     // $("body").undelegate();
+        //     $("body").undelegate("click");
+        // })
+
+        $("#undlgbtn").click("click", function() {
             $("body").undelegate("click");
         })
 
@@ -48,33 +59,60 @@
             console.log("hi");
         })
 
-        let x = 0;
-
-        $("#zbtn").click(function (e) {
+        let y = 0;
+        $("#zbtn").click("click",function (e) {
 
             console.log(e);
-
+            
             $("h2").css({
-                "font-size" : "+=15px"
+                fontSize : "+=15px",
+                backgroundColor : "yellow",
+                fontStyle : "italic"
             })
 
-            $("#zbtn").text("zoom"+ (x+1));
-            x++;
+            $(this).text("zoom" + (++y));
 
-            if(x >= 3) {
+            if (y >= 3) {
                 $("body").undelegate(e);
             }
         })
 
+        // let x = 0;
+
+        // $("#zbtn").click(function (e) {
+
+        //     console.log(e);
+
+        //     $("h2").css({
+        //         "font-size" : "+=15px"
+        //     })
+
+        //     $("#zbtn").text("zoom"+ (x+1));
+        //     x++;
+
+        //     if(x >= 3) {
+        //         $("body").undelegate(e);
+        //     }
+        // })
+
 
         // all element are must be same parent include button
-        $("div").delegate("#dlgmebtn","click",function (){
-            $("h3").before("<p>Thanks for delegate me again</p>");
+        // $("div").delegate("#dlgmebtn","click",function (){
+        //     $("h3").before("<p>Thanks for delegate me again</p>");
+        // })
+
+        // $("#undlgmebtn").click(function (){
+        //     $(".container").undelegate("click");
+        // })
+        $("div").delegate("#dlgmebtn", "click", function() {
+            $("h3").append("<p>I am delegate h3 again");
         })
 
-        $("#undlgmebtn").click(function (){
-            $(".container").undelegate("click");
+        $("#undlgmebtn").click("click", function() {
+            $("div").undelegate("click");
         })
+
+
 
 
     })

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>replace with Mehod</title>
+    <title>replace with Method</title>
     <style>
 
         body {
@@ -16,7 +16,7 @@
         }
 
         .container {
-            widows: 500px;
+            width: 500px;
             background-color: #f4f4f4;
             padding: 20px;
         }
@@ -26,7 +26,7 @@
 <body>
 
     <div class="container">
-        <h1>Are you ready to learn jQuery ??/</h1>
+        <h1>Are you ready to learn jQuery ??</h1>
         <p>this is jquery version 3.6</p>
         <button type="button" class="btn">Click me</button>
     </div>
@@ -37,14 +37,27 @@
     <script type="text/javascript">
 
         $(document).ready(function(){
-            console.log("hi");
+            $(".btn").click("click",function () {
 
-            $("button").click(function(){
+                let heading_one = $(".container > h1").html("Are you read to learn <u>jQuery??</u>");
+                $("h1").replaceWith(heading_one);
 
-                $("h1").replaceWith("<h1>Hello <i>JQuery</i></h1>");
+                let paragraph = $(".container > p").css({
+                    backgroundColor: "yellow",
+                    fontStyle: "italic",
+                    fontWeight: "bold",
+                    fontSize: "25px"
+                })
+                $("p").replaceWith(paragraph);
 
-                $("p").replaceWith("<i style='display:block;margin-bottom:20px;'>jquery is a framework of javascript<u>");
             })
+
+            // $("button").click(function(){
+            //
+            //     $("h1").replaceWith("<h1>Hello <i>JQuery</i></h1>");
+            //
+            //     $("p").replaceWith("<i style='display:block;margin-bottom:20px;'>jquery is a framework of javascript<u>");
+            // })
         })
     </script>
 </body>

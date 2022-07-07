@@ -19,14 +19,22 @@
     $(document).ready(function () {
         console.log("hi");
 
-        $("button").click(function () {
+        $("button").click("click", function () {
+            $("h1").clone().appendTo("body");
+            
+            // $("h1").clone().appendTo("h1");
 
-            // $("h1").clone().appendTo("body");
-
-            // $("h1").clone().appendTo("body");
-
-            $("h1").clone().appendTo(".container");
+            // $("h1").clone().appendTo(".container");
         })
+
+        // $("button").click(function () {
+
+        //     // $("h1").clone().appendTo("body");
+
+        //     // $("h1").clone().appendTo("body");
+
+        //     $("h1").clone().appendTo(".container");
+        // })
     })
 </script>
 

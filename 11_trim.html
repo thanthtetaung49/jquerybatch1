@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,16 +20,28 @@
             // var something = "          Welcome to jQuery          ";
             // console.log("Before using trim = " + something);
 
-            var something = "\n\n          Welcome to jQuery          \n\n";
-            console.log("Before using trim = " + something);
+            // var something = "\n\n          Welcome to jQuery          \n\n";
+            // console.log("Before using trim = " + something);
 
-            // Method 1
-            something = jQuery.trim(something);
-            console.log("After using trim = " + something);
+            // // Method 1
+            // something = jQuery.trim(something);
+            // console.log("After using trim = " + something);
 
-            // Method 2
-            something = $.trim(something);
-            console.log("After using trim = "+ something);
+            // // Method 2
+            // something = $.trim(something);
+            // console.log("After using trim = "+ something);
+
+            let greeting = "\n\n          Hello, Nice to meet yout\n\n          ";
+            console.log(greeting);
+
+            // Method 1 
+            let my_trime = $.trim(greeting);
+            console.log(my_trime);
+
+            let trime_method2 = jQuery.trim(greeting);
+            console.log(trime_method2);
+
+            
         })
 
     </script>

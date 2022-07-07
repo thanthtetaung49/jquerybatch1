@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollTop Method</title>
+
+    <style type="text/css">
+
+        body {
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p {
+            width: 600px;
+            height: 200px;
+
+            /* overflow: scroll; */
+            /* overflow-x: scroll; */
+            overflow-y: scroll;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Scroll Top</h1>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit officiis quis velit id aut temporibus sapiente voluptates. Vero doloribus alias nisi hic ducimus voluptates, facere ex. Odit ducimus iure aspernatur! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste itaque dignissimos eaque asperiores animi hic fuga corporis odit, nobis maxime, voluptatibus quidem dolorum non consectetur, porro voluptates error explicabo ipsa? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia tenetur molestias accusamus labore inventore, minus distinctio. Nulla dolorem obcaecati sed porro eveniet sit quae itaque. Consequatur nobis vitae voluptates harum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, reprehenderit cumque. Ullam aut dolor qui asperiores excepturi quam earum reiciendis similique dolore sunt. Doloremque, ducimus vitae libero aliquam saepe officiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus incidunt fugit ex dolores ut iusto rem assumenda magnam placeat perferendis numquam, earum maxime unde sit cumque officia cum iure rerum? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia quos similique aut accusantium, commodi repellat sed culpa fugiat numquam ex incidunt dolor sint nobis labore explicabo, quod perspiciatis saepe veniam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, minus. Accusamus temporibus quisquam iusto quidem repudiandae quas illo totam eaque, deleniti nam officia distinctio voluptatibus, exercitationem delectus aut a quibusdam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit vitae tempore cumque velit temporibus, facere ipsam libero vel exercitationem suscipit praesentium reprehenderit recusandae consectetur iure error saepe, placeat sapiente nulla. Lorem ipsum dolor sit amet consectetur adipisicing elit. A saepe qui suscipit, eius iste, nihil velit minus dignissimos voluptates nam ut, quasi adipisci accusantium tempore. Ad molestias quisquam autem excepturi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, aperiam excepturi. Dolore obcaecati commodi repudiandae eaque voluptas ex eveniet, sit suscipit beatae alias molestias eum saepe officiis aliquid sint unde. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, cumque corporis tenetur repudiandae, laudantium in fugiat molestiae magni nisi a consequuntur porro eveniet. In blanditiis eveniet nisi, accusamus perferendis praesentium.
+        </p>
+
+        <button type="button" id="btn">Get Scroll Point</button>
+    </div>
+
+    <script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready( function() {
+            console.log("hi");
+
+            $("#btn").click("click", function() {
+
+                let scroll_position = $("p").scrollTop();
+
+                console.log(scroll_position + " px");
+            })
+
+            $("p").scroll( function() {
+                
+                let scroll_position = $(this).scrollTop();
+
+                console.log(scroll_position + " px");
+            })
+        })
+
+    </script>
+    
+</body>
+</html>

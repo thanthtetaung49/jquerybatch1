@@ -79,6 +79,8 @@
                     <option value="peach">Peach</option>
                 </select>
             </div>
+
+            <button type="button">Show result</button>
         </form>
 
         <hr>
@@ -108,23 +110,46 @@
         $(document).ready(function(){
             // console.log("hi");
 
-            function showresult(){
+            let first_name = $("#firstname");
+            let last_name = $("#lastname");
+            let fav_color = $("#favcolor");
+            let fav_fruit = $("#favfruits");
 
-                var getfirstname = $("#firstname").val();
-                    getlastname = $("#lastname").val();
-                    getfavcolor = $("#favcolor").val();
-                    getfavfruits = $("#favfruits").val();
+                $("#firstname").change(function () {
+                    $("#fistnamerst").html("<b>First Name: </b>" + first_name.val());
+                })
 
-                    // console.log(getfirstname);
-                    // console.log(getlastname);
-                    // console.log(getfavcolor);
-                    // console.log(getfavfruits);
+                $("#lastname").change(function () {
+                    $("#lastnamerst").html("<b>Last Name: </b>" + last_name.val());
+                })
 
-                    $("#fistnamerst").html("<b>First Name: </b>" + getfirstname);
-                    $("#lastnamerst").html("<b>Last Name: </b>" + getlastname);
-                    $("#favcolorrst").html("<b>Fav color: </b>" + getfavcolor);
-                    $("#favfruitsrst").html("<b>Fav fruits: </b>" + getfavfruits);
-            }
+                $("#favcolor").change(function () {
+                    $("#favcolorrst").html("<b>Fav color: </b>" + fav_color.val());
+                })
+
+                $("#favfruits").change(function () {
+                    $("#favfruitsrst").html("<b>Fav fruits: </b>" + fav_fruit.val());
+                })
+
+
+
+            // function showresult(){
+
+            //     var getfirstname = $("#firstname").val();
+            //         getlastname = $("#lastname").val();
+            //         getfavcolor = $("#favcolor").val();
+            //         getfavfruits = $("#favfruits").val();
+
+            //         // console.log(getfirstname);
+            //         // console.log(getlastname);
+            //         // console.log(getfavcolor);
+            //         // console.log(getfavfruits);
+
+            //         $("#fistnamerst").html("<b>First Name: </b>" + getfirstname);
+            //         $("#lastnamerst").html("<b>Last Name: </b>" + getlastname);
+            //         $("#favcolorrst").html("<b>Fav color: </b>" + getfavcolor);
+            //         $("#favfruitsrst").html("<b>Fav fruits: </b>" + getfavfruits);
+            // }
 
             // showresult();
 
@@ -135,8 +160,8 @@
 
             // $(".form-control").change(showresult);
 
-            $("input").change(showresult);
-            $("select").change(showresult);
+            // $("input").change(showresult);
+            // $("select").change(showresult);
         })
     </script>
     

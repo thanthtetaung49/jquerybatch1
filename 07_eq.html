@@ -30,8 +30,13 @@
         <h1>Hello Thailand</h1>
         <h1>Hello Indonesia</h1>
         <h1>Hello Srilanka</h1>
-        <h1>Hello Philipphines</h1>
+        <h1>Hello Philippines</h1>
     </div>
+
+    <ul class="our_country">
+        <li><a href="#">Country</a></li>
+        <li><a href="#">City</a></li>
+    </ul>
 
     <script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
 
@@ -40,20 +45,45 @@
         $(document).ready(function(){
             // console.log("hay");
 
-            console.log($("h1"));
+            // console.log($("h1"));
+            //
+            // console.log($("h1").eq(0));
+            // console.log($("h1").eq(1));
+            // console.log($("h1").eq(2));
+            // console.log($("h1").eq(3));
+            // console.log($("h1").eq(4));
 
-            console.log($("h1").eq(0));
-            console.log($("h1").eq(1));
-            console.log($("h1").eq(2));
-            console.log($("h1").eq(3));
-            console.log($("h1").eq(4));
+            let all_h1 = $("h1");
+            console.log(all_h1);
 
-            $("h1").eq(1).css({
-                "color" : "white",
-                "background-color" : "red",
-                "font-size" : "20px",
-                "text-transform" : "uppercase"
+            let all_li = $("li");
+            console.log(all_li);
+
+            let first_li = $("li").eq(0);
+            console.log(first_li);
+
+            let first_link = $("a").eq(1);
+            console.log(first_link);
+
+            let heading_myanmar = $("h1").eq(0);
+            console.log(heading_myanmar);
+            heading_myanmar.text("Hello Bagan");
+            heading_myanmar.css({
+                backgroundColor : "red",
+                color : "#fff"
             })
+
+            let heading_thailand = $("h1").eq(1).text("Hello Bangkok");
+            console.log(heading_thailand);
+
+            let heading_indonesia = $("h1").eq(2).text();
+            console.log(heading_indonesia);
+
+            let heading_sirilinka = $("h1").eq(3).text();
+            console.log(heading_sirilinka);
+
+            let heading_philippines = $("h1").eq(4).text();
+            console.log(heading_philippines);
 
         })
     </script>
