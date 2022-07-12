@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empty & :not() Selector</title>
+    <title>:first & :last Selector</title>
 
     <style type="text/css">
 
@@ -70,29 +70,19 @@
 
     <script type="text/javascript">
 
-        $(document).ready( function() {
-            console.log('hi');
+        $(document).ready(function () {
+            console.log("hi");
 
-            // :empty
-            // $(":empty").css({ backgroundColor: "steelblue"});
+            // :first
+            // $("ul li:first").css("background", "steelblue");
 
-            // $("ul li:empty").css("background-color", "steelblue");
+            $("li:first").css("background-color", "orange");
 
-            // $("ol li:empty").css("background-color", "yellow");
+            // :last
+            // $("ol li:last").css("background", "steelblue");
 
-            // $("p:empty").css("background-color", "green");
-
-            // :not()
-
-            // $("li:not(ul li)").css("background-color", "violet");
-
-            // $("li:not(ol li)").css("background-color", "pink");
-
-            // $("li:not(ul li:empty)").css("background-color", "pink");
-
-            $("li:not(:empty)").css("background-color", "yellow");
-
-        })
+            $("li:last").css("background-color", "orange");
+        });
     </script>
     
 </body>
