@@ -52,43 +52,69 @@
 
     <div class="container">
 
-        <div class="form-group">
-            <label for="firstname">First Name</label>
-            <input type="text" name="firstname" id="firstname" class="form-control" autocomplete="off">
-        </div>
+        <img src="./img/logo1.png" alt="logo1"> <!-- :image selector does not work for img tag-->
 
-        <div class="form-group">
-            <label for="lastname">Last Name</label>
-            <input type="text" name="lastname" id="lastname" class="form-control" autocomplete="off">
-        </div>
+        <form action="" method="" enctype="multipart/form-data">
+            <div>
+                <input type="image" src="./img/logo1.png" alt="logo1">
+            </div>
 
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" class="form-control" autocomplete="off">
-        </div>
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname" id="firstname" class="form-control" autocomplete="off">
+            </div>
+    
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" id="lastname" class="form-control" autocomplete="off">
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" autocomplete="off">
+            </div>
+    
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" class="form-control" autocomplete="off">
+            </div>
+    
+            <div class="form-group form-check">
+                <label for="">Favourite Color</label>
+                <input type="checkbox" name="favcolor" id="favcolorred" class="form-check-input" value="red">
+                <label for="favcolorred">Red</label>
+                <input type="checkbox" name="favcolor" id="favcolorgreen" class="form-check-input" value="green">
+                <label for="favcolorgreen">Green</label>
+                <input type="checkbox" name="favcolor" id="favcolorblue" class="form-check-input" value="blue">
+                <label for="favcolorblue">Blue</label>
+            </div>
+    
+            <div class="form-group form-check">
+                <label for="">Gender</label>
+                <input type="radio" name="gender" id="genderm" class="form-check-input" value="1">
+                <label for="genderm">Male</label>
+                <input type="radio" name="gender" id="genderf" class="form-check-input" value="0">
+                <label for="genderf">Fenake</label>
+            </div>
+    
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select name="country" id="country" class="form-control">
+                    <option value="choose">Choose Country</option>
+                    <option value="mm">Myanmar</option>
+                    <option value="thl">Thailand</option>
+                    <option value="indo">Indonesia</option>
+                </select>
+            </div>
 
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" class="form-control" autocomplete="off">
-        </div>
-
-        <div class="form-group form-check">
-            <label for="">Favourite Color</label>
-            <input type="checkbox" name="favcolor" id="favcolorred" class="form-check-input" value="0">
-            <label for="favcolorred">Red</label>
-            <input type="checkbox" name="favcolor" id="favcolorgreen" class="form-check-input" value="1">
-            <label for="favcolorgreen">Green</label>
-            <input type="checkbox" name="favcolor" id="favcolorblue" class="form-check-input" value="2">
-            <label for="favcolorblue">Blue</label>
-        </div>
-
-        <div class="form-group form-check">
-            <label for="">Gender</label>
-            <input type="radio" name="gender" id="genderm" class="form-check-input" value="1">
-            <label for="genderm">Male</label>
-            <input type="radio" name="gender" id="genderf" class="form-check-input" value="0">
-            <label for="genderf">Fenake</label>
-        </div>
+            <div class="form-group">
+                <label for="nrc">NRC</label>
+                <input type="file" name="nrc" itemid="nrc" class="form-control">
+            </div>
+    
+            <input type="reset" id="reset" value="Reset">
+            <button type="submit" id="submit">Submit</button>
+        </form>
     </div>
 
     <script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
@@ -97,6 +123,154 @@
 
         $(document).ready(function () {
             console.log("hi");
+
+                // input tag not included button
+            // $("input").css({
+            //     backgroundColor: "yellow",
+            //     border: "1px solid red"
+            // });
+
+                // :input tag (included button)
+            // $(":input").css({
+            //     backgroundColor: "yellow",
+            //     border: "1px dashed red"
+            // });
+
+                // :text
+            // $(":text").css({
+            //     backgroundColor: "yellow",
+            //     border: "1px  dashed red"
+            // });
+
+                // :password
+            // $(":password").css({
+            //     backgroundColor: "yellow",
+            //     border: "1px dashed red"
+            // });
+
+                // :checkbox
+            $(":checkbox").css({
+                accentColor: "red"
+            });
+
+                // :radio
+            $(":radio").css({
+                accentColor: "red"
+            });
+
+                // :checked for checkbox
+            // $("input[type=checkbox]").click(function (e) { 
+            //     // console.log("hi");
+
+            //     if($(this).is(":checked")) {
+            //         console.log("favcolor checked");
+            //     } else {
+            //         console.log("favcolor is not yet checked")
+            //     }
+            //     // e.preventDefault();
+                
+            // });
+
+            // $("input[name=favcolor]").click(function (e) { 
+            //     // console.log("hi");
+
+            //     if($(this).is(":checked")) {
+            //         console.log("favcolor checked");
+            //     } else {
+            //         console.log("favcolor is not yet checked");
+            //     }
+            //     // e.preventDefault();
+                
+            // });
+
+            $("input[type=checkbox]").click(function (e) { 
+
+                if($(this).val() === "red") {
+                    console.log($(this).is(":checked") ? "My fav color is red" : "Sorry, my fav color is not red");
+                } else if ($(this).val() === "green") {
+                    console.log($(this).is(":checked") ? "My fav color is green" : "Sorry, my fav color is not red");
+                } else if ($(this).val() === "blue") {
+                    console.log($(this).is(":checked") ? "My fav color is blue" : "Sorry, my fav color is not blue");
+                }
+                // e.preventDefault();
+            });
+
+            // :checkbox for radio
+
+            // $("input[name=gender]").click(function (e) { 
+
+            //     // console.log("hi");
+
+            //     if($(this).is(":checked")) {
+            //         console.log("gender checked");
+            //     }
+
+            //     // e.preventDefault();
+                
+            // });
+
+            $("input[type=radio]").click(function (e) { 
+                if($(this).val() === "1") {
+                    console.log("I am male");
+                } else {
+                    console.log("I am female");
+                }
+                // e.preventDefault();
+                
+            });
+
+            // :selected
+
+            $("#country").change(function() {
+                console.log("hi");
+
+                var getcountry = $(this);
+                // console.log(getcountry.val());
+                // console.log(getcountry.text());
+
+                var getcountry = $(":selected");
+                // var getcountry = $("#country :selected");
+                // var getcountry = $("#counry option:selected");
+
+                console.log(getcountry.val());
+                console.log(getcountry.text());
+            })
+
+            // :file
+            $(":file").css({
+                backgroundColor : "yellow",
+                border: "1px dashed red"
+            })
+
+            // :image
+            $("img").css({width: "100px"});
+
+            $(":image").css({
+                width: "100px"
+            });
+
+            // :reset
+            $(":reset").css({backgroundColor: "yellow"});
+
+            $(":reset").click(function (e) { 
+                console.log("hello i am reset button");
+                e.preventDefault();   
+            });
+
+            // :submit
+            $(":submit").css({backgroundColor: "violet"});
+
+            $(":submit").click(function (e) {
+                console.log("hello i am submit button");
+                e.preventDefault();
+            })
+
+            // :button
+            $(":button").click(function(e) {
+                console.log("hello i am button");
+                e.preventDefault();
+            })
+
         });
 
     </script>
@@ -105,3 +279,5 @@
 </html>
 
 <!-- 12FC -->
+
+<!-- 13BT -->
